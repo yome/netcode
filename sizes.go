@@ -1,9 +1,6 @@
 package netcode
 
 // Taken from https://raw.githubusercontent.com/google/flatbuffers/master/go/sizes.go
-import (
-	"unsafe"
-)
 
 const (
 	// See http://golang.org/ref/spec#Numeric_types
@@ -50,7 +47,11 @@ const (
 	SizeVOffsetT = 2
 )
 
+// Commented out byteSliceToString because it is unused and causes "unsafe" import
+
+/*
 // byteSliceToString converts a []byte to string without a heap allocation.
 func byteSliceToString(b []byte) string {
 	return *(*string)(unsafe.Pointer(&b))
 }
+*/
